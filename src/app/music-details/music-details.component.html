@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <table class="table-hover table-bordered">
+        <tr>
+          <td>
+            <img src={{songById.image}} width="300" height="200">
+          </td>
+        </tr>
+       <tr>
+         <td>Song Id</td>
+         <td>{{songById.songId}}</td>
+       </tr>
+       <tr>
+         <td>Song Name</td>
+         <td>{{songById.songName}}</td>
+       </tr>
+       <tr>
+         <td>Singer</td>
+         <td>{{songById.songArtist}}</td>
+       </tr>
+       <tr>
+         <td>Release Date</td>
+         <td>{{songById.releaseDate|date:"dd-mm-yyyy"}}</td>
+       </tr>
+      </table>
+    </div>
+  </div>
+</div>

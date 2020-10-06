@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Adding new song list</h1>
+  <div class="row">
+    <form #userData="ngForm" (ngSubmit)="onsubmit()">
+      <div class="border border-fuchsia rounded-top" syle="padding:10px">
+
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label class="col-md-6">Song Name</label>
+            <input required #songName="ngModel" [(ngModel)]="userModel.songName" name="songName" autocomplete="off"
+              type="text" class="form-inline" [class.is-invalid]="songName.invalid && songName.touched">
+            <div class="text-danger" [class.d-none]="songName.valid || songName.untouched"> Song name is required</div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-5">Singer Name</label>
+            <input required #songArtist="ngModel" [(ngModel)]="userModel.songArtist" name="songArtist"
+              autocomplete="off" type="text" class="form-inline"
+              [class.is-invalid]="songArtist.invalid && songArtist.touched">
+            <div class="text-danger" [class.d-none]="songArtist.valid || songArtist.untouched"> Singer name is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-5">image url</label>
+            <input required #image="ngModel" [(ngModel)]="userModel.image" name="image" autocomplete="off" type="text"
+              class="form-inline" [class.is-invalid]="image.invalid && image.touched">
+            <div class="text-danger" [class.d-none]="image.valid || image.untouched"> Image is required</div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-5">Release date</label>
+            <input required #releaseDate="ngModel" [(ngModel)]="userModel.releaseDate" name="releaseDate"
+              autocomplete="off" type="text" class="form-inline"
+              [class.is-invalid]="releaseDate.invalid && releaseDate.touched">
+            <div class="text-danger" [class.d-none]="releaseDate.valid || releaseDate.untouched"> Release Date is
+              required
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn btn-outline-secondary" (click)="addNew()">AddNew</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

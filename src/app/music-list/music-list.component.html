@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 border border-blue rounded-top" style="padding:10px">
+     <div class="list-group">
+      <div class="list-group-item list-group-item-action" *ngFor="let song of Songs">
+       <a [routerLink]="['/music-details/',song.songId]">
+       <img src={{song.image}} width="300" height="200"><br>{{song.songName}}<br>{{song.songArtist}}</a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+
